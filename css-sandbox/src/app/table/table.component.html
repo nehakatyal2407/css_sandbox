@@ -1,0 +1,33 @@
+<div>
+    <div class="my-2">
+        <button class="btn btn-primary" (click)="loadData()">Load Data
+            <span class="ml-2" *ngIf="data.length>0" class="badge badge-light">{{data.length}}
+            </span>
+        </button>
+    </div>
+    <div style="text-align: center;" *ngIf="isloading">
+        <strong>Loading...</strong>
+        <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr style="background-color: azure">
+                    <th scope="col">#</th>
+                    <th scope="col">empId</th>
+                    <th scope="col">empName</th>
+                    <th scope="col">empSalary</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="!isloading">
+                <tr *ngFor="let emp of data;index as i">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{emp.empId}}</td>
+                    <td>{{emp.empName}}</td>
+                    <td>{{emp.empSalary}}</td>
+                </tr>
+                <tr>
+            </tbody>
+        </table>
+    </div>
+</div>
