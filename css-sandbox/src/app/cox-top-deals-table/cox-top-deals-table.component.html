@@ -1,0 +1,15 @@
+<div>
+    <div class="my-2">
+        <button class="btn btn-primary" (click)="loadData()">Load Data
+            <span class="ml-2" *ngIf="data.length>0" class="badge badge-light">{{data.length}}
+            </span>
+        </button>
+    </div>
+    <div style="text-align: center;" *ngIf="isloading">
+        <strong>Loading...</strong>
+        <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+    </div>
+    <div *ngIf="!isloading"  >
+        <div *ngFor="let deal of data" class="top-deal mb-1 p-2">{{deal.name}}</div>
+    </div>
+</div>

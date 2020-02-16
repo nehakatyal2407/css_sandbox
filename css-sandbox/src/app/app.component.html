@@ -1,7 +1,7 @@
 <div class="header-container">
   <div class="app-header py-2 pl-4">
-      <div>CSS Lesson</div>
-      <div class="pr-4">Katyal, Neha</div>
+    <div>CSS Lesson</div>
+    <div class="pr-4">Katyal, Neha</div>
   </div>
 </div>
 
@@ -91,20 +91,27 @@
       <div class="col-10 form-3">
         <div class="container">
           <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="pill" href="#home">Table</a></li>
-            <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
-            <li><a data-toggle="pill" href="#menu2">Menu 2</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#home">Table</a>
+            </li>
+            <li class="nav-item">
+              <a data-toggle="pill" class="nav-link" href="#menu1">
+                All Deals
+              </a>
+            </li>
+            <li class="nav-item">
+              <a data-toggle="pill" class="nav-link" href="#menu2">Top Deals</a>
+            </li>
           </ul>
           <div class="tab-content">
             <div id="home" class="tab-pane fade in active home-tab">
               <app-table></app-table>
             </div>
-            <div id="menu1" class="tab-pane fade">
-              <h3>Menu 1</h3>
-
+            <div id="menu1" class="tab-pane fade home-tab">
+              <app-cox-table></app-cox-table>
             </div>
             <div id="menu2" class="tab-pane fade">
-              <h3>Menu 2</h3>
+              <app-cox-top-deals-table></app-cox-top-deals-table>
             </div>
           </div>
         </div>
