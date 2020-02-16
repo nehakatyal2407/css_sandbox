@@ -9,7 +9,9 @@
         <strong>Loading...</strong>
         <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
     </div>
-    <div *ngIf="!isloading"  >
-        <div *ngFor="let deal of data" class="top-deal mb-1 p-2">{{deal.name}}</div>
+    <div *ngIf="!isloading">
+        <div *ngFor="let deal of data" class="top-deal mb-1 p-2">
+           <div class="each-deal p-1">{{deal.name}}</div>
+        </div>
     </div>
 </div>
