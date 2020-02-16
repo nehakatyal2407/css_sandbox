@@ -4,9 +4,10 @@
     max-height: 300px;
     width: 100%;
     align-items: center;
+
+     & .each-deal{
+        width:30%;
+        background-color: azure;
+    }
 }
 
-.each-deal{
-    width:30%;
-    background-color: azure;
-}
