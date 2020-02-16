@@ -2,7 +2,14 @@
     font-weight: 500;
     color:#fff;
     cursor: pointer;
-   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app-links{
+    justify-content: flex-end;
+    cursor: pointer;
 }
 
 .header-container{
@@ -49,4 +56,13 @@
     max-height: 200px;
     min-height: 200px;
     overflow-y: auto;
+}
+
+.feedback-btn{
+    z-index: 9999;
+    position: fixed;
+    right: 0;
+    top: 45%;
+    transform: rotate(90deg);
+    margin-right: -28px;
 }
