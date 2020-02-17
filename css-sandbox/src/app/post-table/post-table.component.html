@@ -1,0 +1,20 @@
+<div>
+    <div class="my-2">
+        <button class="btn btn-primary" (click)="loadData()">Load Data
+        </button>
+         <button class="btn btn-default mx-4" (click)="back()">Back Home
+        </button>
+    </div>
+    <div style="text-align: center;" *ngIf="isloading">
+        <strong>Loading...</strong>
+        <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+    </div>
+    <div *ngIf="!isloading && data">
+      <div>{{data.id}}</div>
+      <div>{{data.title}}</div>
+      <div>{{data.author}}</div>
+      <div *ngFor="let c of data.comments">
+          <div>{{c.body}}</div>
+    </div>
+
+<div>
